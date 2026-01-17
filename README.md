@@ -21,7 +21,7 @@ Prerequisites: Make sure **Docker Desktop** is installed and running.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Nechama05/apollonia-dental-system.git](https://github.com/Nechama05/apollonia-dental-system.git)
+    git clone [https://github.com/Nechama05/apollonia-dental-system.git]
     cd apollonia-dental-system
     ```
 
