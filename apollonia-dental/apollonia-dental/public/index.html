@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollonia Dental - ניהול עובדים</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Apollonia Dental 🦷</h1>
+            <p>מערכת לניהול עובדים ומחלקות</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('departments')">מחלקות</button>
+            <button class="tab-btn" onclick="showTab('employees')">עובדים</button>
+        </div>
+
+        <div id="departments" class="tab-content active">
+            <h2>ניהול מחלקות</h2>
+            
+            <div class="card">
+                <h3>הוסף מחלקה חדשה</h3>
+                <form id="deptForm">
+                    <input type="text" id="deptName" placeholder="שם המחלקה (למשל: אורתודנטיה)" required>
+                    <input type="text" id="deptLocation" placeholder="מיקום (למשל: קומה 2)">
+                    <input type="text" id="deptDesc" placeholder="תיאור קצר">
+                    <button type="submit">שמור מחלקה</button>
+                </form>
+            </div>
+
+            <div class="list-container">
+                <h3>רשימת מחלקות</h3>
+                <ul id="deptList" class="item-list"></ul>
+            </div>
+        </div>
+
+        <div id="employees" class="tab-content">
+            <h2>ניהול עובדים</h2>
+            
+            <div class="card">
+                <h3>הוסף עובד חדש</h3>
+                <form id="empForm">
+                    <input type="text" id="empFirstName" placeholder="שם פרטי" required>
+                    <input type="text" id="empLastName" placeholder="שם משפחה" required>
+                    <input type="text" id="empRole" placeholder="תפקיד (למשל: שיננית)">
+                    
+                    <select id="empDept" required>
+                        <option value="" disabled selected>בחר מחלקה...</option>
+                    </select>
+                    
+                    <button type="submit">שמור עובד</button>
+                </form>
+            </div>
+
+            <div class="list-container">
+                <h3>צוות המרפאה</h3>
+                <ul id="empList" class="item-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app              # 1. מסנכרן את הקוד מהמחשב שלך לקונטיינר
+      - /app/node_modules   # 2. מגן על תיקיית הספריות שלא תידרס
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/apollonia_dental
+      - PORT=3000
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:

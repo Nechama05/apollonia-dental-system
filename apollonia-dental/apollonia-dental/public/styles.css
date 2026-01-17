@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header { text-align: center; margin-bottom: 20px; }
+header h1 { color: #0078d4; margin: 0; }
+
+/* Tabs Design */
+.tabs { display: flex; justify-content: center; margin-bottom: 20px; gap: 10px; }
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background: #e1e1e1;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.tab-btn.active { background: #0078d4; color: white; font-weight: bold; }
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.5s; }
+
+/* Forms */
+.card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover { background-color: #218838; }
+
+/* Lists */
+.item-list { list-style: none; padding: 0; }
+.item-list li {
+    background: white;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-list li:last-child { border-bottom: none; }
+.delete-btn {
+    background-color: #dc3545;
+    width: auto;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
